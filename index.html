@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Athelete Registration Form</title>
+  </head>
+  <body>
+    <article class="container">
+      <!-- Heading -->
+      <h1>Athelete Registration Form</h1>
+      <p>
+        Thank you for signing up at our club. Please fill in your information
+        and we will contact you shortly to complete your membership
+      </p>
+      <!-- Heading End-->
+
+      <form
+        onsubmit="event.preventDefault();mobileValidation();"
+        autocomplete="off"
+      >
+        <!-- Athelete Name -->
+        <div class="athelete-info bottom">
+          <label>Athelete's Name:</label>
+          <div class="inputs">
+            <input
+              type="text"
+              placeholder="First"
+              class="calc"
+              name="firstName"
+              id="firstname"
+              value=""
+              required
+            />
+            <input
+              type="text"
+              placeholder="Last"
+              class="calc"
+              name="lastName"
+              id="lastName"
+              value=""
+              required
+            />
+          </div>
+        </div>
+        <!-- Athelete Name End -->
+
+        <!-- Athelete BirthDate -->
+        <div class="birthdate bottom">
+          <label>DOB:</label>
+          <input type="date" id="birthdate" value="" required />
+        </div>
+        <!-- Athelete BirthDate End-->
+
+        <!-- Athelete Mail Id -->
+        <div class="athelete-email bottom">
+          <label>Email:</label>
+          <div class="inputs">
+            <input type="email" id="email" name="mail" value="" required />
+          </div>
+        </div>
+        <!-- Athelete Mail Id End-->
+
+        <!-- Athelete Phone Number -->
+        <div class="athelete-phone bottom">
+          <label>Phone:</label>
+          <span id="message" style="color: red"></span>
+          <div class="inputs">
+            <input type="tel" name="phone" id="phonenumber" value="" required />
+          </div>
+        </div>
+        <!-- Athelete Phone Number End-->
+
+        <!-- Athelete Address -->
+        <div class="athelete-address bottom">
+          <label>Mailing Address:</label>
+          <div class="inputs">
+            <input
+              type="text"
+              placeholder="Street Address"
+              class="input-address"
+              value=""
+              required
+            />
+            <input
+              type="text"
+              placeholder="city"
+              name="city"
+              id="city"
+              class="calc"
+              value=""
+              required
+            />
+            <input
+              type="text"
+              placeholder="region"
+              class="calc"
+              value=""
+              required
+            />
+            <input
+              type="text"
+              placeholder="Postal/Zip Code"
+              value=""
+              class="calc"
+            />
+            <select
+              name="countries"
+              id="countries"
+              class="calc"
+              value=""
+            ></select>
+          </div>
+        </div>
+        <!-- Athelete Address End-->
+
+        <!-- Athelete Gender -->
+        <div class="gender bottom">
+          <label>Gender:</label>
+          <div class="radio-inputs">
+            <input type="radio" name="gender" /><label>Male</label>
+            <input type="radio" name="gender" /><label>Female</label>
+          </div>
+        </div>
+        <!-- Athelete Gender End-->
+
+        <!-- Athelete Physique -->
+        <div class="athelete-physique bottom">
+          <div class="height">
+            <label>Height: </label>
+            <div class="height-input">
+              <input type="text" class="calc" id="height" required />
+            </div>
+          </div>
+          <div class="weight">
+            <label>Weight: </label>
+            <div class="weight-input">
+              <input type="text" class="calc" required />
+            </div>
+          </div>
+        </div>
+        <!-- Athelete Physique End-->
+
+        <!-- Athelete Illness -->
+        <div class="illness">
+          <p>Does the athelete have a history of chronic illness?</p>
+          <input type="radio" name="illness" /><label>yes</label>
+          <input type="radio" name="illness" /><label>no</label>
+        </div>
+        <!-- Athelete Illness End-->
+
+        <!-- Athelete allergies -->
+        <div class="allergies">
+          <p>Does the athelete have any allergies?</p>
+          <div class="yes">
+            <input type="radio" name="allergies" /><label>yes</label>
+          </div>
+          <div class="no">
+            <input type="radio" name="allergies" /><label>no</label>
+          </div>
+        </div>
+        <!-- Athelete allergies End -->
+
+        <!-- Registor -->
+        <div class="buttons">
+          <div class="submit">
+            <!-- <span class="success">success</span> -->
+            <input type="submit" value="Register" class="done" />
+          </div>
+          <div class="show-table">
+            <button class="btn done" id="table-button">
+              Register In Table
+            </button>
+          </div>
+        </div>
+        <!-- Registor -->
+      </form>
+
+      <!-- Registered Athelete Table -->
+      <table>
+        <tr>
+          <td>
+            <table class="list" id="atheleteList">
+              <thead>
+                <tr class="list-style">
+                  <th>Full Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>City</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- Registered Athelete Table End -->
+    </article>
+
+    <script src="script.js"></script>
+  </body>
+</html>
